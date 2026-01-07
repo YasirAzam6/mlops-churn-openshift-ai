@@ -5,7 +5,7 @@ BASE_IMAGE = "image-registry.openshift-image-registry.svc:5000/redhat-ods-applic
 @dsl.component(base_image=BASE_IMAGE)
 def ingest_and_validate_churn(
     s3_endpoint: str,
-    bucket: str = "datasets",
+    bucket: str = "dataset",
     key: str = "churn/v1/raw/train.csv",
     label_column: str = "Churn",
     min_rows: int = 100,
