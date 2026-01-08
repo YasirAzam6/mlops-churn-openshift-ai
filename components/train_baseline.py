@@ -5,7 +5,7 @@ BASE_IMAGE = "image-registry.openshift-image-registry.svc:5000/redhat-ods-applic
 @dsl.component(base_image=BASE_IMAGE)
 def train_baseline_churn(
     s3_endpoint: str,
-    bucket: str = "datasets",
+    bucket: str = "dataset",
     key: str = "churn/v1/raw/train.csv",
     label_column: str = "Churn",
     model_out: dsl.OutputPath(str) = "model.joblib",
